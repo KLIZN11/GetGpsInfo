@@ -3,6 +3,8 @@ package cn.edu.imnu.com;
 import java.io.File;
 import java.util.Iterator;
 
+import javax.swing.text.html.HTML.Tag;
+
 public class GetGPSInfo {
 	public static void main(String[] args){
 		File jpegFile = new File("F:/图片定位/DCIM/P20130116_125539.jpg");
@@ -11,7 +13,7 @@ public class GetGPSInfo {
 		metadata = JpegMetadataReader.readMetadata(jpegFile);
 		Directory exif = metadata.getDirectory(ExifDirectory.class);
 		Iterator tags1 = exif.getTagIterator();
-		while (tags1.hasNext()) {
+		while (tags1.hasNext()   ) {
 		Tag tag = (Tag)tags1.next();
 		System.out.println(tag);
 		}
