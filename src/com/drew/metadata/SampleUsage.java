@@ -10,7 +10,6 @@ public class SampleUsage {
 	/**
 	    * 图片信息获取metadata元数据信息
 	    * @param fileName 需要解析的文件
-	    * @return
 	    */
 	    public ImgInfoBean parseImgInfo (String fileName)
 	    {
@@ -72,7 +71,6 @@ public class SampleUsage {
 	    /**
 	     * 经纬度转换  度分秒转换
 	     * @param point 坐标点
-	     * @return
 	     */
 	    public String pointToLatlong (String point ) {
 	    	Double du = Double.parseDouble(point.substring(0, point.indexOf("°")).trim());
@@ -84,7 +82,7 @@ public class SampleUsage {
 	   
 	    public static void main(String[] args)
 	    {
-	        ImgInfoBean imgInfoBean = new SampleUsage().parseImgInfo("C:\\DSC_4564.JPG");
+	        ImgInfoBean imgInfoBean = new SampleUsage().parseImgInfo("C:\\Users\\Lenovo\\Desktop\\12345.jpg");
 	        System.out.println(imgInfoBean.toString());
 	    }
 
